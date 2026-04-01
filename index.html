@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <h3 id="greeting">Hello Master Mr. </h3>
+    
+<div class="container">
+    <div class="box"onclick="changeColor(this, 'red')" ondblclick="reset(this)">Red</div>
+    <div class="box"onclick="changeColor(this, 'blue')"ondblclick="reset(this)">Blue</div>
+    <div class="box"onclick="changeColor(this, 'green')"ondblclick="reset(this)">Green</div>
+    <div class="box"onclick="changeColor(this, 'yellow')"ondblclick="reset(this)">Yellow</div>
+</div>    
+<form action="required">
+    
+    <input type="text" id="name" placeholder="Enter your name">
+    <button type="button" onclick="setgreeting()" ondblclick="treat()">greet</button>
+</form>
+<script>
+    function changeColor(element,color){
+        element.style.backgroundColor = color;
+        element.style.color = "white";
+    }
+    function setgreeting(){
+        let name = document.getElementById("name").value;
+        if(name.trim() !== ""){
+            document.getElementById("greeting").innerText = "Hello Master Mr. " + name;
+        }
+    }
+    function reset(element,color){
+element.style.backgroundColor="";
+element.style.color ="";
+    }
+</script>
+</body>
+</html>
